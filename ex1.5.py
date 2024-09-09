@@ -29,7 +29,7 @@ async def main():
     for one_task in tasks:
         await one_task
 
-    print(t1.result())
+    print(t1.result())          #  we can turn to the task and ask for its result
     print(t2.result())
     print(t3.result())
 
