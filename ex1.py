@@ -18,3 +18,5 @@ async def main():
     t1 = asyncio.create_task(up(10))
     t2 = asyncio.create_task(down(8))
     t3 = asyncio.create_task(powers(9))
+
+asyncio.run(main())
