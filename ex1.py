@@ -22,4 +22,9 @@ async def main():
     t2 = asyncio.create_task(down(8))
     t3 = asyncio.create_task(powers(9))
 
+    tasks = [t1, t2, t3]
+
+    for one_task in tasks:
+        await one_task
+
 asyncio.run(main())
