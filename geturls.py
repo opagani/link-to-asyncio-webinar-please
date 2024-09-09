@@ -8,8 +8,11 @@ import aiohttp
 import time
 
 all_urls = ['https://python.org',
-        'https://pypi.org',
-        'https://postgresql.org']
+            'https://pypi.org',
+            'https://postgresql.org',
+            'https://nytimes.com',
+            'https://washingtonpost.com',
+            'https://cnn.com']
 
 async def get_one_url(url, session):
     async with session.get(url) as response:
