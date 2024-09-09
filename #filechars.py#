@@ -20,4 +20,4 @@ async def filechars(filename):
     return filename, output
 
 async def main():
-    all_filenames = ['/etc/passwd', '/Users/reuven/.zshrc'
+    all_filenames = ['/etc/passwd', '/Users/reuven/.zshrc', '/Users/reuven]
