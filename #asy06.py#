@@ -13,6 +13,7 @@ async def main():
     tasks = [asyncio.create_task(hello(i))
              for i in range(10)]
 
+    # after we have scheduled these tasks,
     for one_task in tasks:
         await one task
 
