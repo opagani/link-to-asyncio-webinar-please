@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import asyncio
+import time
+
+async def hello():
+    print('[hello] Before sleep')
+    await asyncio.sleep(1)
+    print('[hello] After sleep')
+    print('Hello!')
+    print('[hello]  sleep')
+
+async def main():
+    await hello()    # a coroutine is awaitable!
+    print('After await')
+
+asyncio.run(main())
