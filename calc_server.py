@@ -15,7 +15,7 @@ def calc(s):   # gets a string with a math expression, and returns the result
     else:
         result = f'Operator {op} not supported'
 
-    return result
+    return f'{first} {op} {second} = {result}'
 
 async def handle_client(reader, writer):
     print(f'Got a connection; {reader=} and {writer=}')
