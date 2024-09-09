@@ -25,6 +25,13 @@ async def handle_client(reader, writer):
         client_string = client_bytes.decode('utf-8').strip()
         print(f'Got {client_string=}')
 
+        if not client_string:
+            break
+
+        result = calc(client_string)
+        writer.write(result.encode())
+        await writer.drain()
+
 async def main():
     server = await asyncio.start_server(handle_client,
                                         'localhost',
