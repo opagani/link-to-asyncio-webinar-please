@@ -3,8 +3,7 @@
 # I want to iterate over a list of URLs, and retrieve each one,
 # counting the number of bytes on that page, and then print it out.
 
-import asyncio
-import aiohttp
+import requests
 import time
 
 all_urls = ['https://python.org',
@@ -13,6 +12,10 @@ all_urls = ['https://python.org',
             'https://nytimes.com',
             'https://washingtonpost.com',
             'https://cnn.com']
+
+start_time = time.time()
+
+
 
 async def get_one_url(url, session):
     async with session.get(url) as response:
@@ -31,7 +34,6 @@ async def get_all_urls(urls):
 async def main():
     await get_all_urls(all_urls)
 
-start_time = time.time()
 asyncio.run(main())
 end_time = time.time()
 
