@@ -22,6 +22,8 @@ async def main():
                      for one_filename in all_filenames]
 
     for one_task in all_tasks:
+        if one_task.done():
+            print(f'\tTask is done')
         filename, result = one_task.result()
         print(filename)
         for key, value in result.items():
