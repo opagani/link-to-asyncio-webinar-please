@@ -8,6 +8,8 @@ async def hello():
     print('Hello!')
 
 async def main():
+    print('Before await')
     await hello()    # a coroutine is awaitable!
+    print('After await')
 
 asyncio.run(main())
