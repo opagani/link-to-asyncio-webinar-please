@@ -20,7 +20,7 @@ output = {}
 for one_url in all_urls:
     print(one_url)
     r = requests.get(one_url)
-    output[one_url] = len(r.content())
+    output[one_url] = len(r.content)
 
 end_time = time.time()
 
