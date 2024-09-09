@@ -29,11 +29,6 @@ async def main():
 
     tasks = [t1, t2, t3]
 
-    # what if we ask for the results before awaiting?
-    print(t1.result())          #  we can turn to the task and ask for its result
-    print(t2.result())
-    print(t3.result())
-
     for one_task in tasks:
         await one_task
 
