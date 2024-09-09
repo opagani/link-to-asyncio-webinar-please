@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+
+import asyncio
+
+def calc(s):   # gets a string with a math expression, and returns the result
+    first, op, second = s.split()
+
+    first = int(first)
+    second = int(second)
+
+    if op == '+':
+        result = first + second
+    eli
+    
