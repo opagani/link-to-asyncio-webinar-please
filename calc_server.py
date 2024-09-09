@@ -37,6 +37,7 @@ async def main():
                                         'localhost',
                                         6789)
 
+    print(f'Server started on port 6789')
     async with server:
         await server.serve_forever()
 
