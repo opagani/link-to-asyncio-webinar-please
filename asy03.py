@@ -7,6 +7,10 @@ async def hello():
 
     # if something is going to take a long time, then I should say "await"
     # that will allow another coroutine to run instead of us
+
+
+    # the object to the right of await must be "awaitable"
+    # most builtin Python objects and methods are *NOT* awaitable
     await time.sleep(1)
     print('Hello!')
 
