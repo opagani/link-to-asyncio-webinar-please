@@ -25,7 +25,7 @@ async def powers(n):
 async def main():
     # create an asyncio.TaskGroup
     # we'll create this group inside of a "with"
-    with asyncio.TaskGroup() as tg:
+    async with asyncio.TaskGroup() as tg:
         t1 = tg.create_task(up(10))
         t2 = tg.create_task(down(8))
         t3 = tg.create_task(powers(9))
