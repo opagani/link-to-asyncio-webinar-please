@@ -17,7 +17,7 @@ async def get_one_url(url, session):
 async def get_all_urls(urls):
     async with aiohttp.ClientSession() as session:
         async with asyncio.TaskGroup() as tg:
-            tasks = [tg.create_task(get_one_url(one_url))
+            tasks = [tg.create_task(get_one_url(one_url), session)
                      for one_url in all_urls]
 
     for one_task in tasks:
