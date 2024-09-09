@@ -6,7 +6,7 @@ import glob
 async def filechars(filename):
     output = {}
     for one_line in open(filename):
-        await asyncio.sleep(0.1)
+        await asyncio.sleep(0.0001)
         for one_character in one_line:
             if one_character in output:  # you could also use a defaultdict here
                 output[one_character] += 1
