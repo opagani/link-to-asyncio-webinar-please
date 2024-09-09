@@ -4,12 +4,15 @@ import asyncio
 import time
 
 async def hello():
+    print('[hello] Before sleep')
     await asyncio.sleep(1)
+    print('[hello] After sleep')
     print('Hello!')
+    print('[hello] After print sleep')
 
 async def main():
-    print('Before await')
+    print('[main] Before await')
     await hello()    # a coroutine is awaitable!
-    print('After await')
+    print('[main] After await')
 
 asyncio.run(main())
