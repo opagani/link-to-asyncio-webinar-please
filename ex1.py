@@ -13,3 +13,8 @@ async def down(maximum):
 async def powers(n):
     for i in range(2, 8):
         print(f'powers, {n} ** {i} = {n**i}')
+
+async def main():
+    t1 = asyncio.create_task(up(10))
+    t2 = asyncio.create_task(down(8))
+    t3 = asyncio.create_task(powers(9))
