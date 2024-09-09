@@ -3,9 +3,9 @@
 import asyncio
 import time
 
-async def hello():
-    await asyncio.sleep(1)
-    print('Hello!')
+async def hello(number):
+    await asyncio.sleep(random.randint(0, 4))  # sleep for up to 4 seconds
+    print(f'[{number}] Hello!')
 
 async def main():
     await hello()    # a coroutine is awaitable!
