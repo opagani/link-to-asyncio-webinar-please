@@ -15,7 +15,7 @@ async def filechars(filename):
     return filename, output
 
 async def main():
-    all_filenames = glob.glob('/etc/*.conf')
+    all_filenames = glob.glob('/etc/*')
 
     async with asyncio.TaskGroup() as tg:
         all_tasks = [tg.create_task(filechars(one_filename))
