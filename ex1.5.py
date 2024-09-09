@@ -8,6 +8,7 @@ async def up(maximum):
     for i in range(maximum):
         await asyncio.sleep(0.1)
         output.append(f'up, {i}')
+    return f'Done with up'
 
 async def down(maximum):
     for i in range(maximum, 0, -1):
