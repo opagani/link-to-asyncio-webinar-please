@@ -5,6 +5,7 @@
 
 import asyncio
 import aiohttp
+import time
 
 all_urls = ['https://python.org',
         'https://pypi.org',
@@ -27,4 +28,8 @@ async def get_all_urls(urls):
 async def main():
     await get_all_urls(all_urls)
 
+start_time = time.time()
 asyncio.run(main())
+end_time = time.time()
+
+print(f'Total time = {(end_time - start_time):0.2f}')
