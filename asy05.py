@@ -8,6 +8,8 @@ async def hello(number):
     print(f'[{number}] Hello!')
 
 async def main():
-    await hello()    # a coroutine is awaitable!
+    for i in range(10):
+        task = asyncio.create_task(hello(i))
+        await task
 
 asyncio.run(main())
