@@ -3,6 +3,7 @@
 # I want to iterate over a list of URLs, and retrieve each one,
 # counting the number of bytes on that page, and then print it out.
 
+import asyncio
 import aiohttp
 
 all_urls = ['https://python.org',
