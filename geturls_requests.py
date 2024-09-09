@@ -31,10 +31,6 @@ async def get_all_urls(urls):
     for one_task in tasks:
         print(one_task.result())
 
-async def main():
-    await get_all_urls(all_urls)
-
-asyncio.run(main())
 end_time = time.time()
 
 print(f'Total time = {(end_time - start_time):0.2f}')
