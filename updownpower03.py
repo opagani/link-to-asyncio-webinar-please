@@ -23,14 +23,15 @@ async def powers(n):
     return f'Done with powers'
 
 async def main():
-    t1 = asyncio.create_task(up(10))
-    t2 = asyncio.create_task(down(8))
-    t3 = asyncio.create_task(powers(9))
+    # create an asyncio.TaskGroup
+    # we'll create this group inside of a "with"
+    with asyncio.TaskGroup() as tg:
+        t1 = tg.create_task(up(10))
+        t2 = tg.create_task(down(8))
+        t3 = tg.create_task(powers(9))
 
-    tasks = [t1, t2, t3]
-
-    for one_task in tasks:
-        await one_task
+    # at the end of this block, we have automatically awaited all of the
+    # tasks in the Task Group
 
     print(t1.result())          #  we can turn to the task and ask for its result
     print(t2.result())
