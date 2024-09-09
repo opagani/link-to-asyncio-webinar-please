@@ -9,3 +9,7 @@ async def up(maximum):
 async def down(maximum):
     for i in range(maximum, 0, -1):
         print(f'down, {i}')
+
+async def powers(n):
+    for i in range(2, 8):
+        print(f'powers, {n} ** {i} = {n**i}')
