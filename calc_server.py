@@ -39,3 +39,5 @@ async def main():
 
     async with server:
         await server.serve_forever()
+
+asyncio.run(main())
