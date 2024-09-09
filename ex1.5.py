@@ -14,11 +14,13 @@ async def down(maximum):
     for i in range(maximum, 0, -1):
         await asyncio.sleep(0.1)
         output.append(f'down, {i}')
+    return f'Done with down'
 
 async def powers(n):
     for i in range(2, 8):
         await asyncio.sleep(0.1)
         output.append(f'powers, {n} ** {i} = {n**i}')
+    return f'Done with powers'
 
 async def main():
     t1 = asyncio.create_task(up(10))
