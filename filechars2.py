@@ -22,15 +22,13 @@ async def main():
                      for one_filename in all_filenames]
 
     for one_task in all_tasks:
-        if one_task.done():
-            print(f'\tTask is done')
-
-        if one_task.exception():
-            print(f'\tWe got an exception!')
-        else:
+        try:
             filename, result = one_task.result()
             print(filename)
             for key, value in result.items():
                 print(f'{key}: {value}')
+        except Exception:
+            print(f'There was a problem')
+
 
 asyncio.run(main())
