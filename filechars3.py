@@ -16,7 +16,7 @@ async def filechars(filename):
 async def main():
     all_filenames = ['/etc/passwd', '/Users/reuven/.zshrc', '/Users/reuven/.emacs.d/init.el']
 
-    async with asyncio.TaskPool() as pool:
+    async with asyncio.TaskPool(2) as pool:
         all_tasks = [pool.submit(filechars(one_filename))
                      for one_filename in all_filenames]
 
