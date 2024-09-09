@@ -25,3 +25,9 @@ async def main():
     async with asyncio.TaskGroup() as tg:
         all_tasks = [tg.create_task(filechars(one_filename))
                      for one_filename in all_filenames]
+
+    for one_task in all_tasks:
+        filename, result = one_task.result()
+        print(filename)
+        for key, value in result.items():
+            print(f'{key}: {value}')
