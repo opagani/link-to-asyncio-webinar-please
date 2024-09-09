@@ -17,3 +17,4 @@ async def filechars(filename):
                 output[one_character] += 1
             else:
                 output[one_character] = 1
+    return filename, output
