@@ -31,3 +31,5 @@ async def main():
         print(filename)
         for key, value in result.items():
             print(f'{key}: {value}')
+
+asyncio.run(main())
