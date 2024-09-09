@@ -9,8 +9,8 @@ async def hello(number):
     print(f'[{number}] Hello!')
 
 async def main():
-    for i in range(10):
-        task = asyncio.create_task(hello(i))
-        await task
+    # create a list of tasks that we have scheduled
+    tasks = [asyncio.create_task(hello(i))
+             for i in range(10)]
 
 asyncio.run(main())
