@@ -7,3 +7,10 @@ urls = ['https://python.org',
         'https://pypi.org',
         'https://postgresql.org']
 
+async def get_one_url(url, session):
+    async with session.get(url) as response:
+        bytes = await response.text()
+        return url, len(bytes)
+
+async def get_all_urls(urls):
+    async with aiohttp.ClientSession(
