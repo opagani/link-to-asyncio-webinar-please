@@ -10,7 +10,6 @@ all_urls = ['https://python.org',
             'https://pypi.org',
             'https://postgresql.org',
             'https://nytimes.com',
-            'https://washingtonpost.com',
             'https://cnn.com']
 
 start_time = time.time()
