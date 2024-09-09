@@ -7,4 +7,7 @@ async def hello():
     await asyncio.sleep(1)
     print('Hello!')
 
-asyncio.run(hello())
+async def main():
+    await hello()    # a coroutine is awaitable!
+
+asyncio.run(main())
