@@ -12,7 +12,7 @@ async def hello():
     # the object to the right of await must be "awaitable"
     # most builtin Python objects and methods are *NOT* awaitable
     # await time.sleep(1)
-    await asyncio.sleep(1)
+    await asyncio.sleep(1)      # we have to use the special asyncio version of sleep, which is awaitable
     print('Hello!')
 
 # to put something on the event loop, we can say asyncio.run()
